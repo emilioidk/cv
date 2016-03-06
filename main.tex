@@ -5,6 +5,9 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
+\newif\ifenglish
+\englishtrue    %COMMENT LINE TO SWITCH FROM ENGLISH TO DANISH
+
 
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
@@ -53,16 +56,56 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
+\ifenglish
+\section{RESUMÉ}
+I was born in Argentina, have lived in U.S.A and am married with a Dane with whom i live, in Aalborg.\\
+I have a Bachelor of Science in Computer Science and I am advanced in my Master of Science in Computer Science. I have interrupted my studies from Argentina to be able to live with my wife and son. Since I got to Denmark, I have used my time to learn danish, and worked as a cleaning assistant to be able to support my family.\\
+My level of english is fluent, and my danish is now good enough for me to seek employment in the IT field.\\
+I am responsible, energetic, and hardworking. I love new challenges and approach to them very professionally.
+\else
 \section{RESUMÉ}
 Jeg født i Argentina, har boet i U.S.A og er nu dansk gift og med bopæl i Aalborg.\\
 Jeg har en Bachelor i Computer Science og har været i gang med at tage en Master i Computer Science. Jeg har været nødt til at afbryde dette studie, for at kunne bo sammen med min kone og lille søn. Siden jeg kom til Danmark, har jeg brugt tiden på at lære dansk og sideløbende arbejdet som rengørings assistent, for at kunne være med til at forsørge min familie.\\
 Mit dansk er nu så godt, at jeg gerne vil i gang med at arbejde indenfor IT.\\
-Jeg er ansvarlig, energisk og hårdarbejdende. Jeg elsker nye udfordringer og går til dem med en professionel tilgang.
+Jeg er ansvarlig, energisk og hårdtarbejdende. Jeg elsker nye udfordringer og går til dem med en professionel tilgang.
+\fi
 
-\section{ERHVERSMÆSSIGE ØNSKER}
+\ifenglish
+\section{PROFESSIONAL INTEREST}
+I would like to work in the following areas:\\
+Programming, Software engineering and development, Web development, Webmaster, WebRTC, Use of formal methods, Internet of Things, Use of new technologies, Structured data, Linked data, Big data.
+\else
+\section{ERHVERVSMÆSSIGE ØNSKER}
 Jeg vil gerne arbejde indenfor følgende områder:\\
 Programering, Software udvikling, Hjemmeside opbygning, Webmaster, WebRTC, Brug af formal methods, Internet of Things, Brug af nye teknologier, Strukturerede data, Linked data, Big data.
+\fi
 
+\ifenglish
+\section{SKILLS}
+\begin{itemize}
+\item \textbf{Programming languages:}
+\begin{itemize}
+\item \textit{Advanced:} HTML, CSS, Javascript, C, C++, Standard ML
+\item \textit{Experienced:} C\#, Haskell, LaTex, Bash, Python
+\item \textit{Basics:} .Net technologies, PHP, Java
+\end{itemize}
+\bigskip
+
+\item \textbf{Frameworks:}\\
+Bootstrap, EasyRTC, JQuery, Foundation, Apache Cordova, Kurento, NodeJS, Django.
+\bigskip
+
+\item \textbf{Development skills:}\\
+Front-end, Back-end, CMS developing, use of formal methods for specification, network and domain management, virtualization.
+\bigskip
+
+\item \textbf{Webpages:}
+\begin{itemize}
+\item Development
+\item Maintainance
+\end{itemize}
+\end{itemize}
+\else
 \section{KOMPETENCER}
 \begin{itemize}
 \item \textbf{Programerings sprog:}
@@ -74,7 +117,7 @@ Programering, Software udvikling, Hjemmeside opbygning, Webmaster, WebRTC, Brug 
 \bigskip
 
 \item \textbf{Frameworks:}\\
-Bootstrap, EasyRTC, JQuery, Foundation, Cordova, Kurento, NodeJS, Django.
+Bootstrap, EasyRTC, JQuery, Foundation, Apache Cordova, Kurento, NodeJS, Django.
 \bigskip
 
 \item \textbf{Udviklings færdigheder:}\\
@@ -87,7 +130,17 @@ Front-end, Back-end, CMS opbygning, use of formal methods for specification, net
 \item Vedligeholdelse af hjemmesider
 \end{itemize}
 \end{itemize}
+\fi
 
+\ifenglish
+\section{PERSONAL CHARACTERISTICS}
+\begin{itemize}
+\item Work hard to achieve my goals and have always been very flexible regarding working hours.
+\item Structured and professional when working.
+\item Good sense of humor and empathic. I am a good communicator and like to interact with others.
+\item Can work under changing environments and have an easy time learning new products, technologies, and techniques.
+\end{itemize}
+\else
 \section{PERSONLIGE EGENSKABER}
 \begin{itemize}
 \item Arbejder hårdt for at nå mine mål og har altid været meget fleksibel i forhold til arbejdstid.
@@ -95,9 +148,48 @@ Front-end, Back-end, CMS opbygning, use of formal methods for specification, net
 \item Humoristisk og empatisk. Kan godt lide at omgås andre mennesker.
 \item Forandringsvillig og har nemt ved at lære nye produkter og systemer at kende.
 \end{itemize}
+\fi
 
+\ifenglish
+\section{PROFESSIONAL EXPERIENCE}
+\subsection{VOCATIONAL}
+\cventry{2014-- }{Cleaning assistant}{Fokus Folkeoplysning}{Aalborg}{}{}
+\begin{itemize}
+\item Responsible for cleaning at Kaffe Fair and Fokus Fitness
+\end{itemize}
+\bigskip
+\cventry{2015--2015}{Web designer og develolper}{Kaffe Fair}{Aalborg}{}{}
+\begin{itemize}
+\item I designed and developed the new webpage for Kaffe Fair. It is responsive and works well in every platform.
+\end{itemize}
+\bigskip
+\cventry{2013--2014}{IT Consultant}{Itecnis S.R.L}{Rosario, Argentina}{}{}
+\begin{itemize}
+\item Setup and maintenance of web and mail servers
+\item Setup and maintenance of networks
+\item Provided IT support to customers via phone
+\item Setup and maintenance of workstations for customers
+\item Trained customers on use of systems and workstations
+\item Participated in development projects with responsibilities in UX/UI design, and front-end and back-end development
+\end{itemize}
+\bigskip
+\cventry{2013--2013}{Intern}{Itecnis S.R.L}{Rosario, Argentina}{}{}
+\begin{itemize}
+\item Was responsible for small projects, designed to help me understand the company's activities
+\item Maintenance of networks
+\item Learned to use daily tools as Linux shell and network diagnose tools
+\end{itemize}
+\bigskip
+\subsection{Miscellaneous}
+\cventry{2010--2011}{}{Au pair}{Washington, USA}{}{}
+\begin{itemize}
+\item Lived a year un the U.S.A. to improve and gain more experience with my english skills
+\item As a result, I talk fluent english and met my wife in U.S.A.
+\end{itemize}
+\bigskip
+\else
 \section{ERHVERS ERFARING}
-\subsection{Vocational}
+\subsection{ERHVERVSUDDANNELSE}
 \cventry{2014-- }{Rengørings assistent}{Fokus Folkeoplysning}{Aalborg}{}{}
 \begin{itemize}
 \item Ansvarlig for rengøring af Kaffe Fair og Fokus Fitness
@@ -122,7 +214,7 @@ Front-end, Back-end, CMS opbygning, use of formal methods for specification, net
 \begin{itemize}
 \item Var ansvarlig for små projekter, som var lavet for at hjælpe mig til at forstå, hvordan der arbejdes ude i virksomhederne.
 \item Vedligeholdte netværker
-\item Lærte at bruge dagligdags redskaber som Linus Shell og netværks diagnose værktøjer etc.
+\item Lærte at bruge dagligdags redskaber som Linux Shell og netværks diagnose værktøjer etc.
 \end{itemize}
 \bigskip
 \subsection{Miscellaneous}
@@ -132,23 +224,48 @@ Front-end, Back-end, CMS opbygning, use of formal methods for specification, net
 \item Som resultat af mit ophold taler jeg nu flydende engelsk, ligesom jeg mødte min kone i USA.
 \end{itemize}
 \bigskip
+\fi
 
+\ifenglish
+\section{EDUCATION}
+\cventry{2014--}{Sprogcenter Aalborg}{Danish course}{Aalborg}{}{Have passed exams Prøve i Dansk 1 and Prøve i Dansk 2 and am getting ready to take the last exam.}
+
+\cventry{2011--}{Universidad Nacional de Rosario}{Master of Science in Computer Science}{Rosario, Argentina}{}{I have passed 90\% of the education, but unfortunately cannot complete the education from Denmark.}
+
+\cventry{2006--2010	}{Universidad Nacional de Rosario}{Bachelor of Science in Computer Science}{Rosario, Argentina}{}{}
+	
+\cventry{2003--2005}{Instituto Polit\'ecnico Superior}{High shool education in Production of Goods and services}{Rosario, Argentina}{}{}
+\else
 \section{UDDANNELSE}
 \cventry{2014--}{Sprogcenter Aalborg}{Dansk kursus}{Aalborg}{}{Har bestået eksamen Prøve i Dansk 1 og Prøve i Dansk 2 og er klar til at gå op til den sidste eksamen.}
 
-\cventry{2011--}{Universidad Nacional de Rosario}{Master of Science in Computer Science}{Rosario, Argentina}{}{Jeg har bestået 90\% af denne uddannelse, men kan desværre ikke få lov at 	færdiggøre den i Danmark.}
+\cventry{2011--}{Universidad Nacional de Rosario}{Master of Science in Computer Science}{Rosario, Argentina}{}{Jeg har bestået 90\% af denne uddannelse, men kan desværre ikke få lov at færdiggøre den i Danmark.}
 
 \cventry{2006--2010	}{Universidad Nacional de Rosario}{Bachelor of Science in Computer Science}{Rosario, Argentina}{}{}
 	
 \cventry{2003--2005}{Instituto Polit\'ecnico Superior}{Gymnasiel uddannelse i Production of Goods and services}{Rosario, Argentina}{}{}
+\fi
 
+\ifenglish
+\section{LANGUAGES}
+\cvitemwithcomment{Spanish}{Mother tongue}{}
+\cvitemwithcomment{Enlgish}{Fluent, both written and spoken}{}
+\cvitemwithcomment{Danish}{Advanced, talk and understand danish}{}
+\else
 \section{SPROG}
 \cvitemwithcomment{Spansk}{Modersmål}{}
 \cvitemwithcomment{Engelsk}{Flydende, såvel skriftligt som mundligt}{}
 \cvitemwithcomment{Dansk}{Advanceret, taler og forstår dansk}{}
+\fi
 
+\ifenglish
+\section{PERSONAL}
+I am married to Line. We have a 2 months old son called Oliver Vincenzo. I am interested in sports, music, technology, and science. I spend my free time with my family.
+\else
 \section{PERSONLIGT}
 Jeg er gift med Line. Sammen har vi Oliver på 6 uger. Jeg interesserer mig for sport, musik og videnskab. Fritiden bruges sammen med familien.
+\fi
+
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
