@@ -36,7 +36,7 @@
 \email{emilio@lundgaardlopez.com}                               % optional, remove / comment the line if not wanted
 \homepage{emilio.lundgaardlopez.com}                         % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
@@ -48,6 +48,27 @@
 % bibliography with mutiple entries
 %\usepackage{multibib}
 %\newcites{book,misc}{{Books},{Others}}
+
+
+
+
+%---------------Add a photo on top of name title--------------------------------------
+\makeatletter
+\@ifpackageloaded{moderncvstylebanking}{%
+\let\oldmakecvtitle\makecvtitle
+\renewcommand*{\makecvtitle}{%
+  {\centering\framebox{\includegraphics[width=\@photowidth]{\@photo}}\par\vspace{10pt}}%
+  \oldmakecvtitle%
+}%
+}{%
+}
+\makeatother
+%-------------------------------------------------------------------------------------
+
+
+
+
+
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -60,7 +81,7 @@
 \section{RESUMÉ}
 I was born in Argentina, have lived in U.S.A and am married with a Dane with whom i live, in Aalborg.\\
 I have a Bachelor of Science in Computer Science and I am advanced in my Master of Science in Computer Science. I have interrupted my studies from Argentina to be able to live with my wife and son. Since I got to Denmark, I have used my time to learn danish, and worked as a cleaning assistant to be able to support my family.\\
-My level of english is fluent, and my danish is now good enough for me to seek employment in the IT field.\\
+My level of English is fluent, and my Danish is now good enough for me to seek employment in the IT field.\\
 I am responsible, energetic, and hardworking. I love new challenges and approach to them very professionally.
 \else
 \section{RESUMÉ}
@@ -97,7 +118,8 @@ Bootstrap, EasyRTC, JQuery, Foundation, Apache Cordova, Kurento, NodeJS, Django.
 
 \item \textbf{Development skills:}\\
 Front-end, Back-end, CMS developing, use of formal methods for specification, network and domain management, virtualization.
-\bigskip
+%\bigskip
+\clearpage
 
 \item \textbf{Webpages:}
 \begin{itemize}
@@ -228,7 +250,7 @@ Front-end, Back-end, CMS opbygning, use of formal methods for specification, net
 
 \ifenglish
 \section{EDUCATION}
-\cventry{2014--}{Sprogcenter Aalborg}{Danish course}{Aalborg}{}{Have passed exams Prøve i Dansk 1 and Prøve i Dansk 2 and am getting ready to take the last exam.}
+\cventry{2015--}{Sprogcenter Aalborg}{Danish language course}{Aalborg}{}{Have passed exams Prøve i Dansk 1 and Prøve i Dansk 2 and am getting ready to take the last exam.}
 
 \cventry{2011--}{Universidad Nacional de Rosario}{Master of Science in Computer Science}{Rosario, Argentina}{}{I have passed 90\% of the education, but unfortunately cannot complete the education from Denmark.}
 
@@ -237,7 +259,7 @@ Front-end, Back-end, CMS opbygning, use of formal methods for specification, net
 \cventry{2003--2005}{Instituto Polit\'ecnico Superior}{High shool education in Production of Goods and services}{Rosario, Argentina}{}{}
 \else
 \section{UDDANNELSE}
-\cventry{2014--}{Sprogcenter Aalborg}{Dansk kursus}{Aalborg}{}{Har bestået eksamen Prøve i Dansk 1 og Prøve i Dansk 2 og er klar til at gå op til den sidste eksamen.}
+\cventry{2015--}{Sprogcenter Aalborg}{Dansk kursus}{Aalborg}{}{Har bestået eksamen Prøve i Dansk 1 og Prøve i Dansk 2 og er klar til at gå op til den sidste eksamen.}
 
 \cventry{2011--}{Universidad Nacional de Rosario}{Master of Science in Computer Science}{Rosario, Argentina}{}{Jeg har bestået 90\% af denne uddannelse, men kan desværre ikke få lov at færdiggøre den i Danmark.}
 
@@ -266,42 +288,6 @@ I am married to Line. We have a 2 months old son called Oliver Vincenzo. I am in
 Jeg er gift med Line. Sammen har vi Oliver på 6 uger. Jeg interesserer mig for sport, musik og videnskab. Fritiden bruges sammen med familien.
 \fi
 
-
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
-
-\clearpage
-%-----       letter       ---------------------------------------------------------
-% recipient data
-\recipient{Company}{Company's full address}
-\date{}
-\opening{Dear Sir or Madam,}
-\closing{Yours faithfully,}
-\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-\makelettertitle
-
-
-
-
-
-
-
-\makeletterclosing
-
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
 
 
