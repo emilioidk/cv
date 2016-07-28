@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 \newif\ifenglish
-\englishtrue    %COMMENT LINE TO SWITCH FROM ENGLISH TO DANISH
+%\englishtrue    %COMMENT LINE TO SWITCH FROM ENGLISH TO DANISH
 
 
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
@@ -39,19 +39,6 @@
 \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-
-
-
-
 %---------------Add a photo on top of name title--------------------------------------
 \makeatletter
 \@ifpackageloaded{moderncvstylebanking}{%
@@ -65,15 +52,10 @@
 \makeatother
 %-------------------------------------------------------------------------------------
 
-
-
-
-
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
@@ -106,14 +88,14 @@ Programering, Software udvikling, Hjemmeside opbygning, Webmaster, WebRTC, Brug 
 \begin{itemize}
 \item \textbf{Programming languages:}
 \begin{itemize}
-\item \textit{Advanced:} HTML, CSS, Javascript, C, C++, Standard ML
-\item \textit{Experienced:} C\#, Haskell, LaTex, Bash, Python
-\item \textit{Basics:} .Net technologies, PHP, Java
+\item \textit{Advanced:} HTML, CSS, Javascript, Python
+\item \textit{Experienced:} Haskell, LaTex, Bash, C, C++, Standard ML, PHP
+\item \textit{Basics:} C\#, .Net technologies, Java, Ruby
 \end{itemize}
 \bigskip
 
 \item \textbf{Frameworks:}\\
-Bootstrap, EasyRTC, JQuery, Foundation, Apache Cordova, Kurento, NodeJS, Django.
+Bootstrap, JQuery, EasyRTC, NodeJS, Django.
 \bigskip
 
 \item \textbf{Development skills:}\\
@@ -132,14 +114,14 @@ Front-end, Back-end, CMS developing (Umbraco and Wordpress), use of formal metho
 \begin{itemize}
 \item \textbf{Programerings sprog:}
 \begin{itemize}
-\item \textit{Avanceret:} HTML, CSS, Javascript, C, C++, Standard ML
-\item \textit{Erfaren:} C\#, Haskell, LaTex, Bash, Python
-\item \textit{Basis:} .Net technologies, PHP, Java
+\item \textit{Advanced:} HTML, CSS, Javascript, Python
+\item \textit{Experienced:} Haskell, LaTex, Bash, C, C++, Standard ML, PHP
+\item \textit{Basics:} C\#, .Net technologies, Java, Ruby
 \end{itemize}
 \bigskip
 
 \item \textbf{Frameworks:}\\
-Bootstrap, EasyRTC, JQuery, Foundation, Apache Cordova, Kurento, NodeJS, Django.
+Bootstrap, JQuery, EasyRTC, NodeJS, Django.
 \bigskip
 
 \item \textbf{Udviklings færdigheder:}\\
@@ -250,7 +232,7 @@ Front-end, Back-end, CMS opbygning (Umbraco og Wordpress), use of formal methods
 
 \ifenglish
 \section{EDUCATION}
-\cventry{2015--}{Sprogcenter Aalborg}{Danish language course}{Aalborg}{}{Have passed exams Prøve i Dansk 1 and Prøve i Dansk 2 and am getting ready to take the last exam.}
+\cventry{2015--}{Sprogcenter Aalborg}{Danish language course}{Aalborg}{}{Have passed exams Prøve i Dansk 1, Prøve i Dansk 2, and Prøve i Dansk 3. This last one I passed with an avarage of 8.5 in May 2016.}
 
 \cventry{2011--}{Universidad Nacional de Rosario}{Master of Science in Computer Science}{Rosario, Argentina}{}{I have passed 90\% of the education, but unfortunately cannot complete the education from Denmark.}
 
@@ -259,7 +241,7 @@ Front-end, Back-end, CMS opbygning (Umbraco og Wordpress), use of formal methods
 \cventry{2003--2005}{Instituto Polit\'ecnico Superior}{High shool education in Production of Goods and services}{Rosario, Argentina}{}{}
 \else
 \section{UDDANNELSE}
-\cventry{2015--}{Sprogcenter Aalborg}{Dansk kursus}{Aalborg}{}{Har bestået eksamen Prøve i Dansk 1 og Prøve i Dansk 2 og er klar til at gå op til den sidste eksamen.}
+\cventry{2015--}{Sprogcenter Aalborg}{Dansk kursus}{Aalborg}{}{Har bestået eksamen Prøve i Dansk 1, Prøve i Dansk 2 og Prøve i Dansk 3. Jeg beståede Prøve i Dansk 3 med karakter 8.5 i Maj 2016.}
 
 \cventry{2011--}{Universidad Nacional de Rosario}{Master of Science in Computer Science}{Rosario, Argentina}{}{Jeg har bestået 90\% af denne uddannelse, men kan desværre ikke få lov at færdiggøre den i Danmark.}
 
@@ -282,7 +264,7 @@ Front-end, Back-end, CMS opbygning (Umbraco og Wordpress), use of formal methods
 
 \ifenglish
 \section{PERSONAL}
-I am married to Line. We have a 2 months old son called Oliver Vincenzo. I am interested in sports, music, technology, and science. I spend my free time with my family.
+I am married to Line. We have a son called Oliver Vincenzo, born in early 2016. I am interested in sports, music, technology, and science. I spend my free time with my family.
 \else
 \section{PERSONLIGT}
 Jeg er gift med Line. Sammen har vi Oliver fra januar 2016. Jeg interesserer mig for sport, musik og videnskab. Fritiden bruges sammen med familien.

@@ -2,3 +2,7 @@
 *.log
 *.out
 *.png
+*.gz
+coverletter.tex
+coverletter.pdf
+sent/*
